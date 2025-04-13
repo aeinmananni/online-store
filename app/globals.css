@@ -1,2 +1,25 @@
 @import "tailwindcss";
 
+ 
+@keyframes gradientBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .animated-gradient {
+    background: linear-gradient(to right, #312e81, #6b21a8, #9d174d);
+    background-size: 200% 200%;
+    animation: gradientBackground 8s ease infinite;
+  
+    /* حالت شیشه‌ای */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.05); /* یه لایه شفاف برای حالت بلور */
+  }
